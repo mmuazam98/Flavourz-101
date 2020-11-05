@@ -8,7 +8,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.render("index", { page: "index" });
+  res.render("shops", { page: "shops" });
+});
+app.get("/menu", (req, res) => {
+  res.render("menu", { page: "menu" });
+});
+app.get("/orders", (req, res) => {
+  res.render("orders", { page: "orders" });
 });
 
 let port = process.env.PORT;

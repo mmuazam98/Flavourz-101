@@ -1,5 +1,140 @@
     <section id="footer">
-        
+        <footer class="footer-area footer--light">
+            <div class="footer-big">
+             
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3 col-sm-12">
+                    <div class="footer-widget">
+                      <div class="widget-about">
+                        <img src="images/Logo-101.png" alt="" class="img-fluid">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, temporibus. Laborum, veritatis cum?</p>
+                        <ul class="contact-details">
+                          <li>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:9909000901">+91-9909000901</a>
+                          </li>
+                          <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:support@flavourz101.com">support@flavourz101.com</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="col-md-3 col-sm-4">
+                    <div class="footer-widget">
+                      <div class="footer-menu footer-menu--1">
+                        <h4 class="footer-widget-title">Popular Category</h4>
+                        <ul>
+                          <li>
+                            <a href="#">Featured Shops</a>
+                          </li>
+                          <li>
+                            <a href="#">Featured Food</a>
+                          </li>
+                          <li>
+                            <a href="#">Shops</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu</a>
+                          </li>
+                          <li>
+                            <a href="#">Orders</a>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  
+          
+                  <div class="col-md-3 col-sm-4">
+                    <div class="footer-widget">
+                      <div class="footer-menu">
+                        <h4 class="footer-widget-title">Our Company</h4>
+                        <ul>
+                          <li>
+                            <a href="#">About Us</a>
+                          </li>
+                          <li>
+                            <a href="#">How It Works</a>
+                          </li>
+                          <li>
+                            <a href="#">Contact Us</a>
+                          </li>
+                          <li>
+                            <a href="#">Plan &amp; Pricing</a>
+                          </li>
+                          <li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                 
+          
+                  <div class="col-md-3 col-sm-4">
+                    <div class="footer-widget">
+                      <div class="footer-menu no-padding">
+                        <h4 class="footer-widget-title">Help Support</h4>
+                        <ul>
+                          <li>
+                            <a href="#">Support Forum</a>
+                          </li>
+                          <li>
+                            <a href="#">Terms &amp; Conditions</a>
+                          </li>
+                          <li>
+                            <a href="#">Support Policy</a>
+                          </li>
+                          <li>
+                            <a href="#">FAQs</a>
+                          </li>
+                          <li>
+                            <a href="#">Buyers Faq</a>
+                          </li>
+                          <li>
+                            <a href="#">Sellers Faq</a>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                   
+                  </div>
+                  
+          
+                </div>
+                
+              </div>
+              
+            </div>
+           
+          
+            <div class="mini-footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="copyright-text">
+                      <p>© 2020
+                        <a href="#">Flavourz 101</a>. Created by
+                        <a href="#">Team InWeb.</a>
+                      </p>
+                    </div>
+          
+                    <div class="go_top">
+                      <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
     </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -9,8 +144,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    
+    <script>
+        if("<%= typeof page !== 'undefined' ? page : '' %>"==="shops"){
+            $("#home").addClass("current-page")
+            $("#Lhome").addClass("current")
+        }  
+        else if("<%= typeof page !== 'undefined' ? page : '' %>"==="menu"){
+            $("#menu").addClass("current-page")
+            $("#Lmenu").addClass("current")
+            
+        } 
+        else if("<%= typeof page !== 'undefined' ? page : '' %>"==="orders"){
+            $("#orders").addClass("current-page")
+            $("#Lorders").addClass("current")
+        } 
+    </script>
     <script src="/js/nav.js"></script>
+    <script src="/js/rawcdn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="/js/<%= typeof page !== 'undefined' ? page : '' %>.js"></script>
 </body>
 </html>
