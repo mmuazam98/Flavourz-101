@@ -3,21 +3,19 @@ const Shop = require('./shops');
 
 const orderSchema = new mongoose.Schema(
 	{
-		items      : [
-			{
-				type : mongoose.Schema.Types.ObjectId,
-				ref  : 'Menu'
-			}
-		],
-		Totalprice : {
-			type     : Number,
-			required
+		items  : {
+			type : mongoose.Schema.Types.ObjectId,
+			ref  : 'Menu'
 		},
-		status     : {
+		Total  : {
+			type     : Number,
+			required : true
+		},
+		status : {
 			type    : Boolean,
 			default : false
 		},
-		shop       : {
+		shop   : {
 			type : mongoose.Schema.Types.ObjectId,
 			ref  : 'Shop'
 		}
@@ -42,5 +40,5 @@ orderSchema.pre('remove', async function (next) {
 	}
 });
 
-const Order = mongoose.model('Menu', orderSchema);
+const Order = mongoose.model('Order', orderSchema);
 module.exports = Order;

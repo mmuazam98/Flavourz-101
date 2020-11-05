@@ -1,19 +1,15 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 const shopSchema = new mongoose.Schema({
-	name            : {
+	username        : {
 		type     : String,
 		required : true,
 		unique   : true
 	},
 	password        : {
-		type     : String,
-		required : true
-	},
-	about           : {
-		type    : String,
-		default : 'Food Joint in SRM Campus'
+		type : String
 	},
 	profileImageUrl : {
 		type : String
@@ -32,27 +28,7 @@ const shopSchema = new mongoose.Schema({
 	]
 });
 
-shopSchema.pre('save', async function (next) {
-	try {
-		if (!this.isModified('password')) {
-			return next();
-		}
-		let hashedPassword = await bcrypt.hash(this.password, 10);
-		this.password = hashedPassword;
-		return next();
-	} catch (err) {
-		return next(err);
-	}
-});
-
-shopSchema.methods.comparePassword = async function (candidatePassword, next) {
-	try {
-		let isMatch = await bcrypt.compare(candidatePassword, this.password);
-		return isMatch;
-	} catch (err) {
-		return next(err);
-	}
-};
+shopSchema.plugin(passportLocalMongoose);
 
 const Shop = mongoose.model('Shop', shopSchema);
 

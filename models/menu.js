@@ -3,22 +3,19 @@ const Shop = require('./shops');
 
 const menuSchema = new mongoose.Schema(
 	{
-		item        : {
+		item      : {
 			type     : String,
-			required
+			required : true
 		},
-		description : {
-			type : String
-		},
-		price       : {
+		price     : {
 			type     : Number,
-			required
+			required : true
 		},
-		available   : {
+		available : {
 			type    : Boolean,
 			default : true
 		},
-		shop        : {
+		shop      : {
 			type : mongoose.Schema.Types.ObjectId,
 			ref  : 'Shop'
 		}
