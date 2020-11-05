@@ -1,15 +1,17 @@
 jQuery(".owl-carousel").owlCarousel({
-  // autoplay: true,
+  autoplay: true,
   lazyLoad: true,
   loop: true,
   margin: 20,
+  animateOut: "fadeOut",
+  animateIn: "fadeIn",
   /*
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
         */
   responsiveClass: true,
   autoHeight: true,
-  autoplayTimeout: 6000,
+  autoplayTimeout: 5000,
   smartSpeed: 800,
   nav: true,
   responsive: {

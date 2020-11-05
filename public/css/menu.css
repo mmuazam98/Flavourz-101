@@ -260,6 +260,7 @@
 #menu .owl-slider .button i {
   text-align: center;
   color: rgb(0, 0, 0);
+  font-size: 22px;
   /* border: solid 2px rgb(70, 70, 70); */
   z-index: 1;
   transition: 0.6s;
