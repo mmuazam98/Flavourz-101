@@ -1,0 +1,93 @@
+<%- include("partials/header") %>
+<section id="edit" style="min-height: 80vh; display: flex; align-items: center">
+  <div class="container my-5 w-50">
+    <% if(edit == "menu"){ %>
+      <form method="POST" action="/shops/<%= currentUser._id %>/menus/<%= menu._id %>?_method=PUT">
+        <div class="form-group">
+          <label for="Name">Item Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Name"
+            name="item"
+            value="<%= menu.item %>"
+            aria-describedby="emailHelp"
+            placeholder="Item Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Pic">Item Image</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Pic"
+            name="imageUrl"
+            value="<%= menu.imageUrl %>"
+            aria-describedby="emailHelp"
+            placeholder="Item Image"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Price">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            id="Price"
+            name="price"
+            value="<%= menu.price %>"
+            aria-describedby="emailHelp"
+            placeholder="Item Price"
+          />
+        </div>
+        <div class="form-check py-3">
+          <input type="checkbox" name="availible" value="true" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1">Available</label>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: #ff9642; border: none"
+        >
+          Update
+        </button>
+      </form>
+    <% } %>
+    <% if(edit == "shop"){ %>
+      <form method="POST" action="/shops/<%= shop._id %>?_method=PUT">
+        <div class="form-group">
+          <label for="Name">Shop Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Name"
+            name="username"
+            value="<%= shop.username %>"
+            aria-describedby="emailHelp"
+            placeholder="Shop Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Pic">Shop Image</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Pic"
+            name="profileImageUrl"
+            value="<%= shop.profileImageUrl %>"
+            aria-describedby="emailHelp"
+            placeholder="Item Image"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: #ff9642; border: none"
+        >
+          Update
+        </button>
+      </form>
+    <% } %>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

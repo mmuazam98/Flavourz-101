@@ -3,8 +3,8 @@ const router = express.Router();
 const passport = require('passport');
 const db = require('../models');
 
-router.get('/register', (req, res) => {
-	//RENDER
+router.get('/', (req, res) => {
+	res.redirect('/shops');
 });
 
 router.post('/register', (req, res) => {
@@ -22,14 +22,11 @@ router.post('/register', (req, res) => {
 		passport.authenticate('local')(req, res, () => {
 			req.flash('success', 'Successfully Registered as: ' + username);
 			//REDIRECT
-			res.send(`${username} is registered successfully`);
+			res.redirect('/shops');
 		});
 	});
 });
 
-router.get('/login', (req, res) => {
-	//REDIRECT
-});
 router.post(
 	'/login',
 	passport.authenticate('local', {

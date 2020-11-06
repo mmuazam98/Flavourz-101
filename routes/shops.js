@@ -15,6 +15,14 @@ router.get('/shops', (req, res) => {
 		})
 		.then((shops) => {
 			//RENDER
+			db.Menu
+				.find()
+				.then((menus) => {
+					res.render('shops', { menus: menus, shops: shops, page: 'shops' });
+				})
+				.catch((err) => {
+					console.log(err);
+				});
 		})
 		.catch((err) => {
 			//error
@@ -33,11 +41,16 @@ router.get('/shops/:shop_id', (req, res) => {
 			console.log(err);
 		});
 });
-
-router.put('/shops/:shop_id', middleware.chechShopOwnership, (req, res) => {
+router.get('/shops/:shop_id/edit', (req, res) => {
+	db.Shop.findById(req.params.shop_id).then((shop) => {
+		res.render('edit', { edit: 'shop', shop: shop });
+	});
+});
+router.put('/shops/:shop_id', (req, res) => {
 	db.Shop.findByIdAndUpdate(req.params.shop_id, req.body).then((shop) => {
 		req.flash('success', 'Updated Shop Successfully');
 		//REDIRECT
+		res.redirect(`/shops`);
 	});
 });
 

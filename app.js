@@ -44,17 +44,9 @@ app.use(function (req, res, next) {
 app.use(indexRoutes);
 app.use(shopRoutes);
 app.use(menuRoutes);
-app.get('/', (req, res) => {
-	res.render('shops', { page: 'shops' });
-});
-app.get('/menu', (req, res) => {
-	res.render('menu', { page: 'menu' });
-});
-app.get('/orders', (req, res) => {
-	res.render('orders', { page: 'orders' });
-});
+app.use(ordersRoute);
 
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 2000;
 
 app.listen(port, function () {
 	console.log(`Server has started successfully at port ${port}`);

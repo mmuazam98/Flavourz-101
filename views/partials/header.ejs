@@ -72,7 +72,7 @@
           <div class="px-3 py-4 position-relative">
             <a href="#!" class="brand__sidebar d-block"
               ><img
-                src="images/Logo-101.png"
+                src="/images/Logo-101.png"
                 onclick="window.location.href='/'"
                 alt="Logo"
                 class="logo mb-5"
@@ -90,12 +90,14 @@
                   ><i class="fa fa-list-ul mr-2" aria-hidden="true"></i>Menu
                 </a>
               </li>
-              <li>
-                <a href="/orders" id="Lorders"
-                  ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
-                  >Orders</a
-                >
-              </li>
+              <% if(currentUser){ %>
+                <li>
+                  <a href="/shops/<%= currentUser._id %>/orders" id="Lorders"
+                    ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
+                    >Orders</a
+                  >
+                </li>
+              <% } %>
               <li>
                 <a href="#"
                   ><i class="fa fa-angle-up mr-2" aria-hidden="true"></i>Back to
@@ -113,11 +115,17 @@
             </a>
             <div class="logo">
               <img
-                src="images/Logo-101.png"
+                src="/images/Logo-101.png"
                 alt="Logo"
                 onclick="window.location.href='/'"
               />
             </div>
+            <% if(currentUser){ %>
+              <!-- sign out button  -->
+            <a class="logout" href="/logout">
+              <i class="fa fa-sign-out" aria-hidden="true" title="Sign Out"></i>
+            </a>
+            <% } %>
           </nav>
         </div>
       </div>
@@ -138,11 +146,13 @@
                 ><i class="fa fa-list-ul" aria-hidden="true"></i
               ></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="orders" href="/orders" title="Orders"
-                ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
-              ></a>
-            </li>
+            <% if(currentUser){ %>
+              <li class="nav-item">
+                <a class="nav-link" id="orders" href="/orders" title="Orders"
+                  ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
+                ></a>
+              </li>
+            <% } %>
           </ul>
         </nav>
       </div>
