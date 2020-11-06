@@ -9,11 +9,11 @@ The application also allows vendors to register themselves on the app and hence 
 <h2 align= "left"><b>A Peek at our Website</b></h2>
 <p align="left">
    <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-07-001254.png"> &ensp;
-   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-174857.png"> &ensp;
-   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-174917.png"> &ensp;
-   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-175136.png"> &ensp;
-   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-175156.png"> &ensp;
-   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-175230.png"> &ensp;
+   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-07-001529.png"> &ensp;
+   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-07-001558.png"> &ensp;
+   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-07-001639.png"> &ensp;
+   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-07-001701.png"> &ensp;
+   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-07-002540.png"> &ensp;
 </p>
 <h2 align= "left"><b>Have Fun With Our Product</b></h2>
 
