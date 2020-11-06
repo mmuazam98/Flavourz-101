@@ -45,9 +45,6 @@ app.use(indexRoutes);
 app.use(shopRoutes);
 app.use(menuRoutes);
 app.get('/', (req, res) => {
-	res.render('index', { page: 'index' });
-});
-app.get('/', (req, res) => {
 	res.render('shops', { page: 'shops' });
 });
 app.get('/menu', (req, res) => {
