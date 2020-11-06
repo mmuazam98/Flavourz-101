@@ -91,18 +91,23 @@
                 </a>
               </li>
               <% if(currentUser){ %>
-                <li>
-                  <a href="/shops/<%= currentUser._id %>/orders" id="Lorders"
-                    ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
-                    >Orders</a
-                  >
-                </li>
+              <li>
+                <a href="/shops/<%= currentUser._id %>/orders" id="Lorders"
+                  ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
+                  >Orders</a
+                >
+              </li>
               <% } %>
               <li>
                 <a href="#"
                   ><i class="fa fa-angle-up mr-2" aria-hidden="true"></i>Back to
                   Top</a
                 >
+              </li>
+              <li>
+                <a href="#!" class="nav-hide"
+                  ><i class="fa fa-angle-left mr-2" aria-hidden="true"></i>Hide
+                </a>
               </li>
             </ul>
           </div>
@@ -120,17 +125,16 @@
                 onclick="window.location.href='/'"
               />
             </div>
-            <% if(currentUser){ %>
-              <!-- sign out button  -->
-            <a class="logout" href="/logout">
-              <i class="fa fa-sign-out" aria-hidden="true" title="Sign Out"></i>
-            </a>
-            <% } %>
           </nav>
         </div>
       </div>
     </section>
-
+    <% if(currentUser){ %>
+    <!-- sign out button  -->
+    <a class="logout" id="logout" href="/logout">
+      <i class="fa fa-sign-out" aria-hidden="true" title="Sign Out"></i>
+    </a>
+    <% } %>
     <!-- mobile navigation  -->
     <section id="bottom-nav">
       <div class="container">
@@ -147,11 +151,17 @@
               ></a>
             </li>
             <% if(currentUser){ %>
-              <li class="nav-item">
-                <a class="nav-link" id="orders" href="/orders" title="Orders"
-                  ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
-                ></a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link" id="orders" href="/orders" title="Orders"
+                ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
+              ></a>
+            </li>
+            <% }else{ %>
+            <li class="nav-item">
+              <a class="nav-link" id="orders" href="#" title="Orders"
+                ><i class="fa fa-angle-up mr-2" aria-hidden="true"></i
+              ></a>
+            </li>
             <% } %>
           </ul>
         </nav>

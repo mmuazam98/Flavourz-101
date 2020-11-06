@@ -61,19 +61,21 @@ jQuery("#carousel").owlCarousel({
 });
 
 $(window).load(function () {
-  if ($(window).width() < 768) {
-    $(".owl-slider").toggleClass("container container-fluid");
+  if ($(window).width() < 500) {
+    $(".owl-slider").addClass("w-75");
+  } else {
+    $(".owl-slider").removeClass("w-75");
   }
 });
-$(window).resize(function () {
-  let width = $(window).width();
-  if (width < 768 && width > 600) {
-    $(".owl-slider").toggleClass("container container-fluid");
-  }
-  if (width < 600) {
-    $(".owl-slider").removeClass("container-fluid").addClass("container");
-  }
-});
+// $(window).resize(function () {
+//   let width = $(window).width();
+//   if (width < 768 && width > 600) {
+//     $(".owl-slider").toggleClass("container container-fluid");
+//   }
+//   if (width < 600) {
+//     $(".owl-slider").removeClass("container-fluid").addClass("container");
+//   }
+// });
 
 // shops section
 
@@ -285,4 +287,11 @@ $(".item").click(function () {
   let shop = $(this).children(".details").children(".shopName").text();
 
   // console.log(price + name + shop);
+});
+$(".authenticate button").click(function () {
+  $(this).notify("ONLY FOR VENDORS!", "warn");
+  setTimeout(function () {
+    $("#signInAuth").click();
+    $("#myModal").modal("show");
+  }, 2000);
 });

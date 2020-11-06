@@ -39,13 +39,10 @@
     </div>
   </div>
   <!-- sign-in sign-up -->
-  <div class="authenticate text-center py-3 <%= currentUser ? 'invisible' : '' %>">
-    <button
-      class="btn orange auth"
-      href="#signup"
-      data-toggle="modal"
-      data-target="#myModal"
-    >
+  <div
+    class="authenticate text-right py-3 <%= currentUser ? 'invisible' : '' %>"
+  >
+    <button class="btn orange auth" href="#signup">
       Sign In/Register <i class="fas fa-user-plus"></i>
     </button>
   </div>
@@ -203,7 +200,7 @@
                     <label class="control-label" for="confirmsignup"></label>
                     <div class="controls text-center">
                       <button
-                      type="submit"
+                        type="submit"
                         id="confirmsignup"
                         class="btn orange"
                       >
@@ -232,36 +229,48 @@
     </div>
   </div>
   <!-- end of authenticate modal  -->
-
+  <% if(currentUser){ %>
+  <div class="container welcomeUser">
+    <hr />
+    <p class="text-center heading">Welcome <%= currentUser.username %>!</p>
+    <hr />
+    <hr />
+  </div>
+  <% } %>
   <!-- shops section  -->
   <div class="layout">
-    <h3 class="heading text-center mt-3" id="fshops">Featured Shops</h3>
+    <h3 class="heading text-center" id="fshops">Featured Shops</h3>
     <section class="inner">
       <ul class="grid">
         <!-- shop 1  -->
         <% shops.forEach(shop => { %>
-          <li class="grid-tile" onclick="window.location.href='/menu'">
-            <div class="item">
-              <div
-                class="item-img"
-                style="
-                  background-image: url('<%= shop.profileImageUrl %>');
-                  background-size: 100%;
-                  background-position: center;
-                "
-              ></div>
-              <div class="item-pnl">
-                <div class="pnl-wrapper">
-                  <div class="pnl-description">
-                    <span class="pnl-label"><%= shop.username %></span>
-                  </div>
+        <li class="grid-tile" onclick="window.location.href='/menu'">
+          <div class="item">
+            <div
+              class="item-img"
+              style="
+                background-image: url('<%= shop.profileImageUrl %>');
+                background-size: 100%;
+                background-position: center;
+              "
+            ></div>
+            <div class="item-pnl">
+              <div class="pnl-wrapper">
+                <div class="pnl-description">
+                  <span class="pnl-label"><%= shop.username %></span>
                 </div>
               </div>
             </div>
-          </li>
+          </div>
+        </li>
         <% }) %>
       </ul>
     </section>
+  </div>
+  <div class="container text-center">
+    <button class="btn orange" onclick="window.location.href='/menu'">
+      View All <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </button>
   </div>
   <!-- end of shops section  -->
   <div class="container">
@@ -270,24 +279,29 @@
 
   <!-- featured food  section-->
   <div class="owl-slider container">
-    <h3 class="heading text-center" id="ffood">Featured Food</h3>
+    <h3 class="heading text-center pb-3" id="ffood">Featured Food</h3>
     <div id="carousel" class="owl-carousel">
       <% menus.forEach(menu => { %>
-        <div class="item">
-          <img class="owl-lazy" data-src="<%= menu.imageUrl %>" alt="" />
-          <div class="details">
-            <span class="name"><%= menu.item %></span><br />
-            <a class="shopName"><%= menu.shop.username %></a><br />
-            <span class="price">₹<%= menu.price %></span><br />
-            <div class="buyNow">
-              <button class="btn">
-                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-              </button>
-            </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="<%= menu.imageUrl %>" alt="" />
+        <div class="details">
+          <span class="name"><%= menu.item %></span><br />
+          <a class="shopName"><%= menu.shop.username %></a><br />
+          <span class="price">₹<%= menu.price %></span><br />
+          <div class="buyNow">
+            <button class="btn">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
+      </div>
       <% }) %>
     </div>
+  </div>
+  <div class="container text-center">
+    <button class="btn orange" onclick="window.location.href='/menu'">
+      View All <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </button>
   </div>
   <!-- end of featured food  section-->
 </section>

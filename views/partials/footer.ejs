@@ -3,24 +3,24 @@
 
 <!-- Modal -->
 <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h4 class="modal-title font-weight-bold" id="exampleModalLabel">ABOUT US</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>
-        This project aims at providing the user with an application that displays various food stalls in the SRM-IST KTR campus. This application also has additional functionality that allows the user to view the menu of any of the food stalls and place an order online at that particular shop. The user can then visit the shop and pick up the order. Hence it saves the user’s time.
-        The application also allows vendors to register themselves on the app and hence be open to online orders. Vendors can edit the menu from the app itself at any time after successful registration.
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title font-weight-bold" id="exampleModalLabel">ABOUT US</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          This project aims at providing the user with an application that displays various food stalls in the SRM-IST KTR campus. This application also has additional functionality that allows the user to view the menu of any of the food stalls and place an order online at that particular shop. The user can then visit the shop and pick up the order. Hence it saves the user’s time.
+          The application also allows vendors to register themselves on the app and hence be open to online orders. Vendors can edit the menu from the app itself at any time after successful registration.
 
-      </p>
+        </p>
+      </div>
+      
     </div>
-    
   </div>
-</div>
 </div>
 <!-- end of about us modal -->
 
@@ -59,6 +59,67 @@
 </div>
 </div>
 <!-- end of contact modal  -->
+
+<!-- Work Modal -->
+<div class="modal fade" id="workModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title font-weight-bold" id="exampleModalLabel">HOW IT WORKS</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pl-2">
+        <ul class="ml-3">
+          <li>Our product basically has two sides i.e. the vendor side and the customer side.</li>
+          <li>Currently there is no need for the customer to login. The users just have to enter. They can directly add the desired item in their cart by browsing the menu and the shops and proceed to checkout, where they’ll receive a unique Order-ID, record it i.e by taking a screenshot and simply show it to that particular shop.</li>
+          <li>The sign in/ register option is only for vendors right now so that they can register their shops and edit their menu at any time.</li>
+          <li>Vendors also have a different page  “Orders” where they can see the list of  orders they’ve received. Further they can mark the order as Pending or Success, depending upon whether the user has paid & collected the order or not. </li>
+        </ul>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- end of work modal -->
+
+<!-- rate us Modal -->
+<div class="modal fade" id="rateUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title font-weight-bold" id="exampleModalLabel">RATE US</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body py-5">
+        <fieldset class="rating text-center">
+            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+        </fieldset>
+      </div>
+      <div class="modal-footer text-center">
+        <button class="btn orange" data-dismiss="modal">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of rateUs modal -->
+
+<!-- main footer content  -->
       <footer class="footer-area footer--light">
           <div class="footer-big">
            
@@ -66,7 +127,7 @@
               <div class="row">
                 <div class="col-md-3 col-sm-12">
                   <div class="footer-widget">
-                    <div class="widget-about">
+                    <div class="widget-about text-center">
                       <img src="/images/Logo-101.png" alt="" class="img-fluid">
                       <p><em class="font-weight-bold text-underline"><u>FlAVOURZ101</u></em> aims at providing the user with an application that displays various food stalls in the SRM-IST KTR campus.</p>
                       <ul class="contact-details">
@@ -101,9 +162,7 @@
                         <li>
                           <a href="/menu">Menu</a>
                         </li>
-                        <li>
-                          <a href="/orders">Orders</a>
-                        </li>
+                       
                       </ul>
                     </div>
                     
@@ -121,13 +180,13 @@
                           <a href="#" data-toggle="modal" data-target="#aboutModal">About Us</a>
                         </li>
                         <li>
-                          <a href="#">How It Works</a>
+                          <a href="#" data-toggle="modal" data-target="#workModal">How It Works</a>
                         </li>
                         <li>
                           <a href="#" data-toggle="modal" data-target="#form">Contact Us</a>
                         </li>
                         <li>
-                          <a href="#">Plan &amp; Pricing</a>
+                          <a href="#" data-toggle="modal" data-target="#rateUs">Rate Us</a>
                         </li>
                         <li>
                       </ul>
@@ -155,12 +214,7 @@
                         <li>
                           <a href="#">FAQs</a>
                         </li>
-                        <li>
-                          <a href="#">Buyer's FAQ</a>
-                        </li>
-                        <li>
-                          <a href="#">Seller's FAQ</a>
-                        </li>
+                       
                       </ul>
                     </div>
                     
@@ -186,10 +240,12 @@
                       <a href="#">Team InWeb.</a>
                     </p>
                   </div>
-        
+                <% if(currentUser){ %> 
                   <div class="go_top">
                     <i class="fa fa-angle-up" aria-hidden="true"></i>
                   </div>
+                <% } %>
+
                 </div>
               </div>
             </div>
@@ -221,6 +277,7 @@
   </script>
   <script src="/js/nav.js"></script>
   <script src="/js/rawcdn.js"></script>
+  <script src="/js/notify.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="/js/<%= typeof page !== 'undefined' ? page : '' %>.js"></script>
 </body>
