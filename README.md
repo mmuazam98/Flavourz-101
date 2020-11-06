@@ -17,7 +17,7 @@ The application also allows vendors to register themselves on the app and hence 
 </p>
 <h2 align= "left"><b>Have Fun With Our Product</b></h2>
 
-- Website Link :
+- Website Link : https://github.com/mmuazam98/Flavourz-101
 
 <h2 align= "left"><b><u>Tech Stack Used</u></b></h2>
 <b>Back End </b>
