@@ -18,8 +18,8 @@
 #shops #discountModal .modal-dialog {
   position: fixed;
   top: 0;
-  left: auto;
-  right: 0.5rem;
+  right: auto;
+  left: 0.95rem;
   /* bottom: 0; */
   margin-bottom: 0.5rem;
   min-width: 300px;
@@ -120,6 +120,7 @@
   right: 0px;
 }
 #shops .owl-carousel .item .details .buyNow i {
+  color: #000;
   font-size: 28px;
   background-color: #ff9642;
   padding: 5px 8px 9px 8px;
@@ -265,8 +266,6 @@
 }
 #shops .layout .pnl-label {
   color: #424346;
-  /* line-height: 22px; */
-  max-height: 35px;
   letter-spacing: 2px;
   font-family: "Lobster", cursive;
   font-size: 39px;

@@ -289,9 +289,24 @@ $(".item").click(function () {
   // console.log(price + name + shop);
 });
 $(".authenticate button").click(function () {
-  $(this).notify("ONLY FOR VENDORS!", "warn");
+  $(this).notify("ONLY FOR VENDORS!", {
+    position: "left",
+    className: "warn",
+    autoHideDelay: 1500,
+  });
+  setTimeout(function () {
+    $(".authenticate button").notify(
+      "Please register only if you are a Vendor.",
+      {
+        position: "left",
+        className: "warn",
+        autoHideDelay: 1800,
+      }
+    );
+  }, 1500);
+
   setTimeout(function () {
     $("#signInAuth").click();
     $("#myModal").modal("show");
-  }, 2000);
+  }, 3500);
 });

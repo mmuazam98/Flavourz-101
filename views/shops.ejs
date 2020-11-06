@@ -1,6 +1,7 @@
 <%- include("partials/header") %>
 <section id="shops">
   <!-- discount modal  -->
+  <% if(!currentUser){ %>
   <div
     class="modal fade"
     id="discountModal"
@@ -38,6 +39,8 @@
       </div>
     </div>
   </div>
+  <% } %>
+
   <!-- sign-in sign-up -->
   <div
     class="authenticate text-right py-3 <%= currentUser ? 'invisible' : '' %>"
@@ -290,7 +293,10 @@
           <span class="price">₹<%= menu.price %></span><br />
           <div class="buyNow">
             <button class="btn">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <a
+                href="/shops/<%= menu.shop._id %>/menus/<%= menu._id %>/confirm"
+                ><i class="fa fa-shopping-bag" aria-hidden="true"></i
+              ></a>
             </button>
           </div>
         </div>
