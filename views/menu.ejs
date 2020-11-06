@@ -210,78 +210,225 @@
   <!-- shops with menus  -->
 
   <!-- shop 1  -->
-  <% shops.forEach(shop => { %>
-    <div class="owl-slider container mt-2" id="shop-1">
-      <div class="heading">
-        <img
-          src="<%= shop.profileImageUrl %>"
-          alt="logo"
-          class="profileShop img-fluid"
-        />
-        <h3 class="text-left">
-          <%= shop.username %>
-          <a class="bg-dark" href="/shops/<%= shop._id %>/edit">
-              <i
-            class="fas fa-user-edit <%= currentUser && currentUser._id.equals(shop._id) ? '' : 'invisible' %>"
-            title="Edit your Shop"
-          ></i>
-          </a>
-        </h3>
-      </div>
-  
-      <!--<i class="fas fa-edit    "></i>shop name  -->
-      <% if(currentUser){ %>
-        <div class="text-right edit <%= currentUser._id.equals(shop._id) ? '' : 'invisible' %>">
-       <% }else{ %>
-        <div class="text-right edit invisible">
-      <% } %>
-        <i
-          class="fas fa-plus-square pb-3 px-2"
-          title="Add Item."
-          data-toggle="modal"
-          data-target="#form-3"
-        ></i
-        >
-      </div>
-  
-      <div id="carousel" class="owl-carousel">
-        <!-- item  -->
-        <% shop.menu.forEach(menu => { %>
-          <div class="item">
-            <img class="owl-lazy" data-src="<%= menu.imageUrl %>" alt="" />
+  <% if(currentUser){ %>
+    <% shops.filter(shop => shop._id.equals(currentUser._id)).forEach(shop => { %>
+      <div class="owl-slider container mt-2" id="shop-1">
+        <div class="heading">
+          <img
+            src="<%= shop.profileImageUrl %>"
+            alt="logo"
+            class="profileShop img-fluid"
+          />
+          <h3 class="text-left">
+            <%= shop.username %>
+            <a class="bg-dark" href="/shops/<%= shop._id %>/edit">
+                <i
+              class="fas fa-user-edit <%= currentUser && currentUser._id.equals(shop._id) ? '' : 'invisible' %>"
+              title="Edit your Shop"
+            ></i>
+            </a>
+          </h3>
+        </div>
     
-            <div class="overlay"></div>
-            <div class="button">
-              <% if(currentUser && currentUser._id.equals(shop._id)){ %>
-                <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/edit" ><i
-                  class="fas fa-edit"
-                ></i></a>
-              <% } %>
-              <% if(currentUser && currentUser._id.equals(shop._id)){ %>
-                <form method="POST" class="d-inline" action="/shops/<%= shop._id %>/menus/<%= menu._id %>?_method=DELETE">
-                  <button class="btn" type="submit">
-                    <i class="fas fa-trash px-2" aria-hidden="true"></i>
+        <!--<i class="fas fa-edit    "></i>shop name  -->
+        <% if(currentUser){ %>
+          <div class="text-right edit <%= currentUser._id.equals(shop._id) ? '' : 'invisible' %>">
+         <% }else{ %>
+          <div class="text-right edit invisible">
+        <% } %>
+          <i
+            class="fas fa-plus-square pb-3 px-2"
+            title="Add Item."
+            data-toggle="modal"
+            data-target="#form-3"
+          ></i
+          >
+        </div>
+    
+        <div id="carousel" class="owl-carousel">
+          <!-- item  -->
+          <% shop.menu.forEach(menu => { %>
+            <div class="item">
+              <img class="owl-lazy" data-src="<%= menu.imageUrl %>" alt="" />
+      
+              <div class="overlay"></div>
+              <div class="button">
+                <% if(currentUser && currentUser._id.equals(shop._id)){ %>
+                  <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/edit" ><i
+                    class="fas fa-edit"
+                  ></i></a>
+                <% } %>
+                <% if(currentUser && currentUser._id.equals(shop._id)){ %>
+                  <form method="POST" class="d-inline" action="/shops/<%= shop._id %>/menus/<%= menu._id %>?_method=DELETE">
+                    <button class="btn" type="submit">
+                      <i class="fas fa-trash px-2" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                <% } %>
+              </div>
+              <div class="details">
+                <span class="name"><%= menu.item %></span><br />
+                <span class="price">₹<%= menu.price %></span><br />
+                <div class="buyNow">
+                  <button class="btn addToOrders">
+                    <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/confirm">
+                      <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
                   </button>
-                </form>
-              <% } %>
-            </div>
-            <div class="details">
-              <span class="name"><%= menu.item %></span><br />
-              <span class="price">₹<%= menu.price %></span><br />
-              <div class="buyNow">
-                <button class="btn addToOrders">
-                  <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/confirm">
-                    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
-                  </a>
-                </button>
+                </div>
               </div>
             </div>
-          </div>
-        <% }) %>
+          <% }) %>
+        </div>
+        <hr />
       </div>
-      <hr />
-    </div>
-  <% }) %>
+    <% }) %>
+    <% shops.filter(shop => !shop._id.equals(currentUser._id)).forEach(shop => { %>
+      <div class="owl-slider container mt-2" id="shop-1">
+        <div class="heading">
+          <img
+            src="<%= shop.profileImageUrl %>"
+            alt="logo"
+            class="profileShop img-fluid"
+          />
+          <h3 class="text-left">
+            <%= shop.username %>
+            <a class="bg-dark" href="/shops/<%= shop._id %>/edit">
+                <i
+              class="fas fa-user-edit <%= currentUser && currentUser._id.equals(shop._id) ? '' : 'invisible' %>"
+              title="Edit your Shop"
+            ></i>
+            </a>
+          </h3>
+        </div>
+    
+        <!--<i class="fas fa-edit    "></i>shop name  -->
+        <% if(currentUser){ %>
+          <div class="text-right edit <%= currentUser._id.equals(shop._id) ? '' : 'invisible' %>">
+         <% }else{ %>
+          <div class="text-right edit invisible">
+        <% } %>
+          <i
+            class="fas fa-plus-square pb-3 px-2"
+            title="Add Item."
+            data-toggle="modal"
+            data-target="#form-3"
+          ></i
+          >
+        </div>
+    
+        <div id="carousel" class="owl-carousel">
+          <!-- item  -->
+          <% shop.menu.forEach(menu => { %>
+            <div class="item">
+              <img class="owl-lazy" data-src="<%= menu.imageUrl %>" alt="" />
+      
+              <div class="overlay"></div>
+              <div class="button">
+                <% if(currentUser && currentUser._id.equals(shop._id)){ %>
+                  <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/edit" ><i
+                    class="fas fa-edit"
+                  ></i></a>
+                <% } %>
+                <% if(currentUser && currentUser._id.equals(shop._id)){ %>
+                  <form method="POST" class="d-inline" action="/shops/<%= shop._id %>/menus/<%= menu._id %>?_method=DELETE">
+                    <button class="btn" type="submit">
+                      <i class="fas fa-trash px-2" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                <% } %>
+              </div>
+              <div class="details">
+                <span class="name"><%= menu.item %></span><br />
+                <span class="price">₹<%= menu.price %></span><br />
+                <div class="buyNow">
+                  <button class="btn addToOrders">
+                    <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/confirm">
+                      <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+        <hr />
+      </div>
+    <% }) %>
+  <% }else{ %>
+    <% shops.forEach(shop => { %>
+      <div class="owl-slider container mt-2" id="shop-1">
+        <div class="heading">
+          <img
+            src="<%= shop.profileImageUrl %>"
+            alt="logo"
+            class="profileShop img-fluid"
+          />
+          <h3 class="text-left">
+            <%= shop.username %>
+            <a class="bg-dark" href="/shops/<%= shop._id %>/edit">
+                <i
+              class="fas fa-user-edit <%= currentUser && currentUser._id.equals(shop._id) ? '' : 'invisible' %>"
+              title="Edit your Shop"
+            ></i>
+            </a>
+          </h3>
+        </div>
+    
+        <!--<i class="fas fa-edit    "></i>shop name  -->
+        <% if(currentUser){ %>
+          <div class="text-right edit <%= currentUser._id.equals(shop._id) ? '' : 'invisible' %>">
+         <% }else{ %>
+          <div class="text-right edit invisible">
+        <% } %>
+          <i
+            class="fas fa-plus-square pb-3 px-2"
+            title="Add Item."
+            data-toggle="modal"
+            data-target="#form-3"
+          ></i
+          >
+        </div>
+    
+        <div id="carousel" class="owl-carousel">
+          <!-- item  -->
+          <% shop.menu.forEach(menu => { %>
+            <div class="item">
+              <img class="owl-lazy" data-src="<%= menu.imageUrl %>" alt="" />
+      
+              <div class="overlay"></div>
+              <div class="button">
+                <% if(currentUser && currentUser._id.equals(shop._id)){ %>
+                  <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/edit" ><i
+                    class="fas fa-edit"
+                  ></i></a>
+                <% } %>
+                <% if(currentUser && currentUser._id.equals(shop._id)){ %>
+                  <form method="POST" class="d-inline" action="/shops/<%= shop._id %>/menus/<%= menu._id %>?_method=DELETE">
+                    <button class="btn" type="submit">
+                      <i class="fas fa-trash px-2" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                <% } %>
+              </div>
+              <div class="details">
+                <span class="name"><%= menu.item %></span><br />
+                <span class="price">₹<%= menu.price %></span><br />
+                <div class="buyNow">
+                  <button class="btn addToOrders">
+                    <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/confirm">
+                      <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+        <hr />
+      </div>
+    <% }) %>
+  <% } %>
   <!-- end of shop 1  -->
 
   
