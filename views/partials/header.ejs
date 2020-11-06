@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap CSS -->
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -43,6 +44,11 @@
       href="https://fonts.googleapis.com/css?family=Oswald:200,400,700"
       rel="stylesheet"
     />
+    <!-- owl carousel  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
 
     <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
     <link
@@ -50,7 +56,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <title>Flavourz 101</title>
-    <link rel="icon" href="" type="image/ico" />
+    <link rel="icon" href="images/Logo-101.png" type="image/ico" />
     <link
       rel="stylesheet"
       href="/css/<%= typeof page !== 'undefined' ? page : '' %>.css"
@@ -58,6 +64,88 @@
 
     <link rel="stylesheet" href="/css/nav.css" />
   </head>
-  <body></body>
+  <body>
+    <section id="navigation">
+      <div class="navabar__grub">
+        <div class="sidebar__navbar active">
+          <span></span>
+          <div class="px-3 py-4 position-relative">
+            <a href="#!" class="brand__sidebar d-block"
+              ><img
+                src="images/Logo-101.png"
+                onclick="window.location.href='/'"
+                alt="Logo"
+                class="logo mb-5"
+            /></a>
+
+            <ul class="sidebar__list mt-5">
+              <li>
+                <a href="/" class="active" id="Lhome"
+                  ><i class="fa fa-shopping-basket mr-2" aria-hidden="true"></i
+                  >Shops</a
+                >
+              </li>
+              <li>
+                <a href="/menu" id="Lmenu"
+                  ><i class="fa fa-list-ul mr-2" aria-hidden="true"></i>Menu
+                </a>
+              </li>
+              <li>
+                <a href="/orders" id="Lorders"
+                  ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
+                  >Orders</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa fa-angle-up mr-2" aria-hidden="true"></i>Back to
+                  Top</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sidebar__content">
+          <nav class="navbar navbar-expand-md sidebar__side p-3">
+            <a class="navabar__menu position-relative d-inline-block" href="#">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+            <div class="logo">
+              <img
+                src="images/Logo-101.png"
+                alt="Logo"
+                onclick="window.location.href='/'"
+              />
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- mobile navigation  -->
+    <section id="bottom-nav">
+      <div class="container">
+        <nav class="navbar navbar-dark bg-primary fixed-bottom">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" id="home" href="/" title="Shops"
+                ><i class="fa fa-shopping-basket" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="menu" href="/menu" title="Menu"
+                ><i class="fa fa-list-ul" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="orders" href="/orders" title="Orders"
+                ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </body>
 </html>
-<section id="navigation"></section>

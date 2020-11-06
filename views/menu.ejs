@@ -1,0 +1,633 @@
+<%- include("partials/header") %>
+<section id="menu">
+  <!-- sign-in sign-up -->
+  <div class="authenticate text-center py-3">
+    <button
+      class="btn orange auth"
+      href="#signup"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      Sign In/Register <i class="fas fa-user-plus"></i>
+    </button>
+  </div>
+  <!-- end of sign-in sign-up -->
+
+  <!-- authenticate modal  -->
+  <div
+    class="modal fade bs-modal-sm"
+    id="myModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="mySmallModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <br />
+        <div class="bs-example bs-example-tabs">
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active px-3">
+              <a href="#signin" id="signInAuth" data-toggle="tab">Sign In</a>
+            </li>
+            <li class="pr-3">
+              <a href="#signup" data-toggle="tab">Register</a>
+            </li>
+            <li class="pr-3"><a href="#why" data-toggle="tab">Why?</a></li>
+          </ul>
+        </div>
+        <div class="modal-body">
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in" id="why">
+              <p>
+                We need this information so that you can receive access to the
+                site and its content. Rest assured your information will not be
+                sold, traded, or given to anyone.
+              </p>
+              <p>
+                <br />
+                Please contact
+                <a class="mail" mailto:href="support@flavourz101.com"
+                  >support@flavourz101.com</a
+                >
+                for any other inquiries.
+              </p>
+            </div>
+            <div class="tab-pane fade active in" id="signin">
+              <form class="form-horizontal">
+                <fieldset>
+                  <!-- Sign In Form -->
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="userid">Name:</label>
+                    <div class="controls">
+                      <input
+                        required=""
+                        id="userid"
+                        name="userid"
+                        type="text"
+                        class="form-control"
+                        placeholder="Shop Name"
+                        class="input-medium"
+                        required=""
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Password input-->
+                  <div class="control-group">
+                    <label class="control-label" for="passwordinput"
+                      >Password:</label
+                    >
+                    <div class="controls">
+                      <input
+                        required=""
+                        id="passwordinput"
+                        name="passwordinput"
+                        class="form-control"
+                        type="password"
+                        placeholder="********"
+                        class="input-medium"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- sign in button  -->
+                  <div class="control-group">
+                    <label class="control-label" for="signin"></label>
+                    <div class="controls text-center">
+                      <button id="signin" name="signin" class="btn orange">
+                        Sign In
+                      </button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <!-- Sign Up Form -->
+            <div class="tab-pane fade" id="signup">
+              <form class="form-horizontal">
+                <fieldset>
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="Name">Name:</label>
+                    <div class="controls">
+                      <input
+                        id="Name"
+                        name="Name"
+                        class="form-control"
+                        type="text"
+                        placeholder="Shop's Name"
+                        class="input-large"
+                        required=""
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="userid"
+                      >Shop Image URL:</label
+                    >
+                    <div class="controls">
+                      <input
+                        id="userid"
+                        name="userid"
+                        class="form-control"
+                        type="text"
+                        placeholder="http://..."
+                        class="input-large"
+                        required=""
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Password input-->
+                  <div class="control-group">
+                    <label class="control-label" for="password"
+                      >Password:</label
+                    >
+                    <div class="controls">
+                      <input
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        type="password"
+                        placeholder="********"
+                        class="input-large"
+                        required=""
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="reenterpassword"
+                      >Confirm Password:</label
+                    >
+                    <div class="controls">
+                      <input
+                        id="reenterpassword"
+                        class="form-control"
+                        name="reenterpassword"
+                        type="password"
+                        placeholder="********"
+                        class="input-large"
+                        required=""
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Sign up Button -->
+                  <div class="control-group">
+                    <label class="control-label" for="confirmsignup"></label>
+                    <div class="controls text-center">
+                      <button
+                        id="confirmsignup"
+                        name="confirmsignup"
+                        class="btn orange"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <center>
+            <button
+              type="button"
+              class="btn cancel"
+              data-dismiss="modal"
+              style="background-color: rgb(255, 73, 41); color: white"
+            >
+              Close
+            </button>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of authenticate modal  -->
+
+  <!-- shops with menus  -->
+
+  <!-- shop 1  -->
+  <div class="owl-slider container mt-2" id="shop-1">
+    <h3 class="heading text-left">ShopName</h3>
+
+    <!--<i class="fas fa-edit    "></i>shop name  -->
+    <div class="text-right edit">
+      <i class="fas fa-edit pb-3"></i>
+    </div>
+
+    <div id="carousel" class="owl-carousel">
+      <!-- item  -->
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-1.jpg" alt="" />
+
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹240</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- item  -->
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-2.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹220</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- item  -->
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-3.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹110</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- item  -->
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-4.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹70</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- item  -->
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-1.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹55</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- item -->
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-2.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹90</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+  <!-- end of shop 1  -->
+
+  <!-- shop 2  -->
+  <div class="owl-slider container mt-2" id="shop-2">
+    <h3 class="heading text-left">ShopName</h3>
+    <div id="carousel-2" class="owl-carousel">
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-1.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹240</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-2.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹220</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-3.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹110</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-4.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹70</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-1.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹55</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-2.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹90</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-3.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹100</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-4.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹150</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+  <!-- end of shop 2  -->
+
+  <!-- shop 3  -->
+  <div class="owl-slider container mt-2" id="shop-3">
+    <h3 class="heading text-left">ShopName</h3>
+    <div id="carousel-2" class="owl-carousel">
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-1.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <i class="fas fa-edit"></i>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹240</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-2.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹220</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-3.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹110</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-4.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹70</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-1.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹55</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-2.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹90</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-3.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹100</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="owl-lazy" data-src="images/food-4.jpg" alt="" />
+        <div class="overlay"></div>
+        <div class="button">
+          <a href="#"><i class="fas fa-edit"></i></a>
+        </div>
+        <div class="details">
+          <span class="name">ProductName</span><br />
+          <a class="shopName">Java Green</a><br />
+          <span class="price">₹150</span><br />
+          <div class="buyNow">
+            <button class="btn addToOrders">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+  <!-- end of shop 3  -->
+</section>
+
+<%- include("partials/footer") %>

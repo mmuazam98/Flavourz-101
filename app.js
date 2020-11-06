@@ -47,6 +47,15 @@ app.use(menuRoutes);
 app.get('/', (req, res) => {
 	res.render('index', { page: 'index' });
 });
+app.get('/', (req, res) => {
+	res.render('shops', { page: 'shops' });
+});
+app.get('/menu', (req, res) => {
+	res.render('menu', { page: 'menu' });
+});
+app.get('/orders', (req, res) => {
+	res.render('orders', { page: 'orders' });
+});
 
 let port = process.env.PORT || 5000;
 
