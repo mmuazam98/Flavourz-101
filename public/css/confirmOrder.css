@@ -1,0 +1,15 @@
+#confirmOrder {
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#confirmOrder .fa-check-circle-o {
+  color: #fa7f1a;
+}
+#confirmOrder p.note {
+  color: red;
+  font-size: small;
+}

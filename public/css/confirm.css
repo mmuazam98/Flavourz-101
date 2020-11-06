@@ -4,19 +4,7 @@
   display: flex;
   align-items: center;
 }
-#confirm .modal {
-  position: absolute !important;
-  top: 20%;
-  /* transform: translateY(-50%); */
-}
-#confirm .modal .modal-body .fa-check-circle,
-#confirm .modal .modal-title .fa-check-circle-o {
-  color: #fa7f1a;
-}
-#confirm .modal p.note {
-  color: red;
-  font-size: small;
-}
+
 #confirm a {
   border: 0 none;
   outline: 0;

@@ -11,18 +11,18 @@ function checkActive() {
   if ($(window).width() > 768) {
     if ($(".sidebar__navbar").hasClass("active")) {
       $(
-        "section#shops, section#confirm, section#menu, section#footer,section#orders"
+        "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder"
       ).addClass("shift");
       $(".navabar__menu i").removeClass("fa fa-bars").addClass("fas fa-stream");
     } else {
       $(".navabar__menu i").addClass("fa fa-bars").removeClass("fas fa-stream");
       $(
-        "section#shops, section#confirm, section#menu, section#footer,section#orders"
+        "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder"
       ).removeClass("shift");
     }
   } else {
     $(
-      "section#shops, section#confirm, section#menu, section#footer,section#orders"
+      "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder"
     ).removeClass("shift");
   }
 }

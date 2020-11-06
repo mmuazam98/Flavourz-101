@@ -22,6 +22,9 @@ app.get("/confirm", (req, res) => {
 app.get("/edit", (req, res) => {
   res.render("edit", { page: "edit" });
 });
+app.get("/confirmOrder", (req, res) => {
+  res.render("confirmOrder", { page: "confirmOrder" });
+});
 
 let port = process.env.PORT;
 if (port == null || port == "") {
