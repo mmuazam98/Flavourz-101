@@ -221,17 +221,10 @@
         <h3 class="text-left">
           <%= shop.username %>
           <a class="bg-dark" href="/shops/<%= shop._id %>/edit">
-            <% if(currentUser){ %>
               <i
-            class="fas fa-user-edit <%= currentUser._id.equals(shop._id) ? '' : 'invisible' %>"
+            class="fas fa-user-edit <%= currentUser && currentUser._id.equals(shop._id) ? '' : 'invisible' %>"
             title="Edit your Shop"
           ></i>
-             <% }else{ %>
-              <i
-            class="fas fa-user-edit"
-            title="Edit your Shop"
-          ></i>
-            <% } %>
           </a>
         </h3>
       </div>

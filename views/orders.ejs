@@ -7,6 +7,7 @@
           <thead class="thead-orange">
             <tr>
               <th scope="col">S.No.</th>
+              <th scope="col">Order Id</th>
               <th scope="col">Item Name</th>
               <th scope="col">Quantity</th>
               <th scope="col">Total Cost</th>
@@ -17,6 +18,7 @@
             <% orders.forEach((order, index) => { %>
                 <tr>
                     <th scope="row"><%= index+1 %></th>
+                    <td><%= order._id %></td>
                     <td><%= order.item.item %></td>
                     <td>1</td>
                     <td>₹<%= order.Total %>.00</td>
@@ -25,7 +27,7 @@
                         <button name="status" value=<%= order.status ? false : true %> class="btn <%= order.status ? 'btn-success' : 'btn-danger' %> confirmOrder">
                           <%= order.status ? "Paid" : "Pending" %>
       
-                          <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                          <i class="fa <%= order.status ? 'fa-check-circle-o' : 'fa-times-circle-o' %>" aria-hidden="true"></i>
                         </button>
                       </form>
                     </td>

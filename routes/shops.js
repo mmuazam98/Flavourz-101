@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const shuffle = require('shuffle-array');
 
 const db = require('../models');
 
@@ -17,8 +18,10 @@ router.get('/shops', (req, res) => {
 			//RENDER
 			db.Menu
 				.find()
+				.populate('shop')
 				.then((menus) => {
-					res.render('shops', { menus: menus, shops: shops, page: 'shops' });
+					const Menus = shuffle(menus);
+					res.render('shops', { menus: Menus, shops: shops, page: 'shops' });
 				})
 				.catch((err) => {
 					console.log(err);
