@@ -97,7 +97,7 @@
                 type="text"
                 class="form-control"
                 id="Name"
-                placeholder="New name for your shop."
+                placeholder="Name of the item."
               />
             </div>
             <div class="form-group">
@@ -135,25 +135,107 @@
   </div>
   <!--end of  edit menu modal -->
 
+  <!-- add item modal -->
+  <div
+    class="modal fade"
+    id="form-3"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <h5
+            class="modal-title font-weight-bold text-center"
+            id="exampleModalLabel"
+          >
+            Add item.
+          </h5>
+
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <hr />
+        <form>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="font-weight-bold" for="Name">Item name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Name"
+                placeholder="Name of the item."
+              />
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold" for="imageURL">Image URL:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="imageURL"
+                placeholder="http://..."
+              />
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold" for="price">Price:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="price"
+                placeholder="₹XXX"
+              />
+            </div>
+          </div>
+          <hr />
+          <div class="modal-footer border-top-0 d-flex justify-content-center">
+            <button type="submit" class="btn orange">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--end of  add item modal -->
+
   <!-- shops with menus  -->
 
   <!-- shop 1  -->
   <div class="owl-slider container mt-2" id="shop-1">
-    <h3 class="heading text-left">
-      ShopName
-      <i
-        class="fas fa-user-edit"
-        title="Edit Shop Name or Image."
-        data-toggle="modal"
-        data-target="#form"
-      ></i>
-    </h3>
+    <div class="heading">
+      <img
+        src="https://images.unsplash.com/photo-1582574739477-3bf2eea7ae58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
+        alt="logo"
+        class="profileShop img-fluid"
+      />
+      <h3 class="text-left">
+        ShopName
+        <i
+          class="fas fa-user-edit"
+          title="Edit Shop Name or Image."
+          data-toggle="modal"
+          data-target="#form"
+        ></i>
+      </h3>
+    </div>
 
     <!--<i class="fas fa-edit    "></i>shop name  -->
     <div class="text-right edit">
       <i
-        class="fas fa-edit pb-3"
-        title="Add/Delete Item."
+        class="fas fa-plus-square pb-3 px-2"
+        title="Add Item."
+        data-toggle="modal"
+        data-target="#form-3"
+      ></i
+      ><i
+        class="fas fa-edit pb-3 px-2"
+        title="Edit/Delete Item."
         data-toggle="modal"
         data-target="#form-2"
       ></i>
@@ -282,7 +364,14 @@
 
   <!-- shop 2  -->
   <div class="owl-slider container mt-2" id="shop-2">
-    <h3 class="heading text-left">ShopName</h3>
+    <div class="heading">
+      <img
+        src="https://images.unsplash.com/photo-1600182610361-4b4d664e07b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=282&q=80"
+        alt="logo"
+        class="profileShop img-fluid"
+      />
+      <h3 class="text-left">ShopName</h3>
+    </div>
     <div id="carousel-2" class="owl-carousel">
       <div class="item">
         <img class="owl-lazy" data-src="images/food-1.jpg" alt="" />
@@ -411,7 +500,14 @@
 
   <!-- shop 3  -->
   <div class="owl-slider container mt-2" id="shop-3">
-    <h3 class="heading text-left">ShopName</h3>
+    <div class="heading">
+      <img
+        src="https://images.unsplash.com/photo-1598808503467-34ff6b46c8fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80"
+        alt="logo"
+        class="profileShop img-fluid"
+      />
+      <h3 class="text-left">ShopName</h3>
+    </div>
     <div id="carousel-2" class="owl-carousel">
       <div class="item">
         <img class="owl-lazy" data-src="images/food-1.jpg" alt="" />

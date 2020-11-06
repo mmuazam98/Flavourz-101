@@ -253,7 +253,10 @@
   color: #424346;
   /* line-height: 22px; */
   max-height: 35px;
-  font-size: 29px;
+  letter-spacing: 2px;
+  font-family: "Lobster", cursive;
+  font-size: 39px;
+  /* font-weight: 600; */
   overflow: hidden;
   display: block;
 }

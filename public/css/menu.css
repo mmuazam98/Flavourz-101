@@ -115,10 +115,12 @@
 #main button.cancel {
   background-color: rgb(255, 83, 83);
 }
-#menu .heading {
+#menu .heading h3 {
   font-family: "Lobster", cursive;
   font-size: 40px;
   z-index: 999;
+  position: relative;
+  margin-left: 55px;
 }
 #menu .heading i {
   position: absolute;
@@ -129,7 +131,13 @@
 #menu .heading i:hover {
   color: #ff9642 !important;
 }
-#menu .owl-nav button {
+#menu .heading img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+}
+#menu #menu .owl-nav button {
   position: absolute;
   top: 50%;
   background-color: #000;

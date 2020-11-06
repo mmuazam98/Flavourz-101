@@ -1,5 +1,5 @@
 jQuery(".owl-carousel").owlCarousel({
-  // autoplay: true,
+  autoplay: true,
   lazyLoad: true,
   loop: true,
   margin: 20,
