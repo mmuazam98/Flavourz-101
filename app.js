@@ -16,6 +16,12 @@ app.get("/menu", (req, res) => {
 app.get("/orders", (req, res) => {
   res.render("orders", { page: "orders" });
 });
+app.get("/confirm", (req, res) => {
+  res.render("confirm", { page: "confirm" });
+});
+app.get("/edit", (req, res) => {
+  res.render("edit", { page: "edit" });
+});
 
 let port = process.env.PORT;
 if (port == null || port == "") {

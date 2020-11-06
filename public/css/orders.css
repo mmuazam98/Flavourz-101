@@ -1,0 +1,8 @@
+#orders {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start;
+}
+#orders .thead-orange {
+  background-color: #ff9642 !important;
+}

@@ -1,4 +1,64 @@
-    <section id="footer">
+  <section id="footer">
+    <!-- about us modal  -->
+
+<!-- Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title font-weight-bold" id="exampleModalLabel">ABOUT US</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          This project aims at providing the user with an application that displays various food stalls in the SRM-IST KTR campus. This application also has additional functionality that allows the user to view the menu of any of the food stalls and place an order online at that particular shop. The user can then visit the shop and pick up the order. Hence it saves the user’s time.
+          The application also allows vendors to register themselves on the app and hence be open to online orders. Vendors can edit the menu from the app itself at any time after successful registration.
+
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- end of about us modal -->
+
+<!-- contact modal  -->
+
+<div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h4 class="modal-title font-weight-bold" id="exampleModalLabel">CONTACT US</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div><hr>
+      <form>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="email1">Email address</label>
+            <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">Your information is safe with us.</small>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <label for="my-textarea">Message</label>
+            <textarea id="my-textarea" class="form-control" name="" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer border-top-0 d-flex justify-content-center">
+          <button type="submit" class="btn orange">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end of contact modal  -->
         <footer class="footer-area footer--light">
             <div class="footer-big">
              
@@ -8,7 +68,7 @@
                     <div class="footer-widget">
                       <div class="widget-about">
                         <img src="images/Logo-101.png" alt="" class="img-fluid">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, temporibus. Laborum, veritatis cum?</p>
+                        <p><em class="font-weight-bold text-underline"><u>FlAVOURZ101</u></em> aims at providing the user with an application that displays various food stalls in the SRM-IST KTR campus.</p>
                         <ul class="contact-details">
                           <li>
                             <i class="fa fa-phone" aria-hidden="true"></i>
@@ -58,13 +118,13 @@
                         <h4 class="footer-widget-title">Our Company</h4>
                         <ul>
                           <li>
-                            <a href="#">About Us</a>
+                            <a href="#" data-toggle="modal" data-target="#aboutModal">About Us</a>
                           </li>
                           <li>
                             <a href="#">How It Works</a>
                           </li>
                           <li>
-                            <a href="#">Contact Us</a>
+                            <a href="#" data-toggle="modal" data-target="#form">Contact Us</a>
                           </li>
                           <li>
                             <a href="#">Plan &amp; Pricing</a>
@@ -96,10 +156,10 @@
                             <a href="#">FAQs</a>
                           </li>
                           <li>
-                            <a href="#">Buyers Faq</a>
+                            <a href="#">Buyer's FAQ</a>
                           </li>
                           <li>
-                            <a href="#">Sellers Faq</a>
+                            <a href="#">Seller's FAQ</a>
                           </li>
                         </ul>
                       </div>

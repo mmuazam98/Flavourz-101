@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+<section id="edit" style="min-height: 80vh; display: flex; align-items: center">
+  <div class="container my-5 w-50">
+    <form>
+      <div class="form-group">
+        <label for="Name">Name</label>
+        <input
+          type="name"
+          class="form-control"
+          id="Name"
+          aria-describedby="emailHelp"
+          placeholder="Item Name"
+        />
+      </div>
+      <div class="form-check py-3">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Available</label>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="background-color: #ff9642; border: none"
+      >
+        Update
+      </button>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

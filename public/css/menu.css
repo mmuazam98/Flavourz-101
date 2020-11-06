@@ -88,7 +88,10 @@
 .checkbox label {
   padding-left: 5px;
 }
-
+.btn {
+  border: 0 none;
+  outline: 0 none;
+}
 #menu .edit {
   position: relative;
   margin-top: -17px;

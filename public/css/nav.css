@@ -400,3 +400,8 @@ body {
     margin-bottom: 50px;
   }
 }
+#footer button.orange {
+  background-color: #ff9642;
+  color: white;
+  margin: 0 10px;
+}

@@ -10,20 +10,20 @@ function resizeWindow() {
 function checkActive() {
   if ($(window).width() > 768) {
     if ($(".sidebar__navbar").hasClass("active")) {
-      $("#shops").addClass("shift");
-      $("section#menu").addClass("shift");
-      $("#footer").addClass("shift");
+      $(
+        "section#shops, section#confirm, section#menu, section#footer,section#orders"
+      ).addClass("shift");
       $(".navabar__menu i").removeClass("fa fa-bars").addClass("fas fa-stream");
     } else {
       $(".navabar__menu i").addClass("fa fa-bars").removeClass("fas fa-stream");
-      $("#shops").removeClass("shift");
-      $("#footer").removeClass("shift");
-      $("section#menu").removeClass("shift");
+      $(
+        "section#shops, section#confirm, section#menu, section#footer,section#orders"
+      ).removeClass("shift");
     }
   } else {
-    $("#shops").removeClass("shift");
-    $("section#menu").removeClass("shift");
-    $("#footer").removeClass("shift");
+    $(
+      "section#shops, section#confirm, section#menu, section#footer,section#orders"
+    ).removeClass("shift");
   }
 }
 $(window).load(function () {

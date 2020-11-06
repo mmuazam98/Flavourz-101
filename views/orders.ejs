@@ -1,1 +1,53 @@
-<%- include("partials/header") %> <%- include("partials/footer") %>
+<%- include("partials/header") %>
+<section id="orders">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead class="thead-orange">
+            <tr>
+              <th scope="col">S.No.</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Total Cost</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>ItemName</td>
+              <td>1</td>
+              <td>₹60.00</td>
+              <td>
+                <form action="">
+                  <button class="btn btn-danger confirmOrder">
+                    Pending
+
+                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+
+              <td>ItemName</td>
+              <td>1</td>
+              <td>₹90.00</td>
+              <td>
+                <form action="">
+                  <button class="btn btn-danger confirmOrder">
+                    Pending
+                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include("partials/footer") %>

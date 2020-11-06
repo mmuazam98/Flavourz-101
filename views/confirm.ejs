@@ -1,0 +1,134 @@
+<%- include("partials/header") %>
+<section id="confirm">
+  <!-- order confirmation modal  -->
+  <!-- Modal -->
+  <div
+    class="modal fade modal-center"
+    id="myModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title font-weight-bold" id="exampleModalLabel">
+            Order confirmed!
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+          </h4>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fa fa-check-circle fa-5x"></i>
+          <p>Your Order ID is: <strong id="orderID"></strong></p>
+          <p>You have to pay: <strong id="totalCost"></strong></p>
+          <p class="note">*Please take a screenshot of your order ID.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="basket">
+      <div class="basket-module">
+        <label for="promo-code" class="font-weight-bold"
+          >Have a promo code?</label
+        >
+        <input
+          id="promo-code"
+          type="text"
+          name="promo-code"
+          maxlength="15"
+          class="promo-code-field"
+          placeholder="Enter coupon code"
+        />
+        <button class="promo-code-cta">Apply</button>
+      </div>
+      <div class="basket-labels">
+        <ul>
+          <li class="item item-heading">Item</li>
+          <li class="price">Price</li>
+          <li class="quantity">Quantity</li>
+          <li class="subtotal">Subtotal</li>
+        </ul>
+      </div>
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img
+              src="images/food-1.jpg"
+              alt="Placholder Image 2"
+              class="product-frame"
+            />
+          </div>
+          <div class="product-details">
+            <h1>
+              <strong
+                ><span class="item-quantity">1 x</span> ProductName</strong
+              >
+            </h1>
+            <p>
+              <strong><a href="#">ShopName</a></strong>
+            </p>
+            <p><strong>Product Code</strong> - 232321939</p>
+          </div>
+        </div>
+        <div class="price">60.00</div>
+        <div class="quantity">
+          <input
+            type="number"
+            value="1"
+            min="1"
+            class="quantity-field"
+            disabled
+          />
+        </div>
+        <div class="subtotal">60.00</div>
+        <div class="remove">
+          <button>Remove <i class="fas fa-trash-alt"></i></button>
+        </div>
+      </div>
+    </div>
+    <aside>
+      <div class="summary">
+        <div class="summary-total-items">
+          <span class="total-items"></span> Item(s) in your Cart
+        </div>
+        <div class="summary-subtotal">
+          <div class="subtotal-title">Subtotal</div>
+          <div class="subtotal-value final-value" id="basket-subtotal">
+            60.00
+          </div>
+          <div class="summary-promo hide">
+            <div class="promo-title">Discount</div>
+            <div class="promo-value final-value" id="basket-promo"></div>
+          </div>
+        </div>
+        <div class="summary-delivery">
+          <select name="delivery-collection" class="summary-delivery-selection">
+            <option value="0" selected="selected">
+              Select Collection or Delivery
+            </option>
+            <option value="collection">Collection</option>
+            <option value="delivery" disabled>Delivery (Coming Soon)</option>
+          </select>
+        </div>
+        <div class="summary-total">
+          <div class="total-title">Total</div>
+          <div class="total-value final-value" id="basket-total">60.00</div>
+        </div>
+        <div class="summary-checkout">
+          <button class="checkout-cta">Confirm Order</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+</section>
+<%- include("partials/footer") %>
