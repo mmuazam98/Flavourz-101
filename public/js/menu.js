@@ -1,5 +1,5 @@
 jQuery(".owl-carousel").owlCarousel({
-  autoplay: true,
+  // autoplay: true,
   lazyLoad: true,
   loop: true,
   margin: 20,
@@ -33,10 +33,6 @@ jQuery(".owl-carousel").owlCarousel({
       items: 5,
     },
   },
-});
-
-$(".authenticate button").click(function () {
-  $("#signInAuth").click();
 });
 
 $(".addToOrders").click(function () {

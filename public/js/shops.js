@@ -286,3 +286,7 @@ $(".item").click(function () {
 
   // console.log(price + name + shop);
 });
+
+$(".authenticate button").click(function () {
+  $("#signInAuth").click();
+});

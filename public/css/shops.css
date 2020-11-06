@@ -6,7 +6,7 @@
 #shops .container {
   padding: 2rem 0rem;
 }
-#shops .modal-dialog {
+#shops #discountModal .modal-dialog {
   position: fixed;
   top: 0;
   left: auto;
@@ -16,26 +16,30 @@
   min-width: 300px;
   max-width: 400px;
 }
-#shops .modal-dialog .notice {
+#shops #discountModal .modal-dialog .notice {
   padding: 0rem 1rem;
 }
-#shops .modal-dialog .notice h4 {
+#shops #discountModal .modal-dialog .notice h4 {
   margin-bottom: 1.5rem;
 }
-#shops .modal-dialog .notice p {
+#shops #discountModal .modal-dialog .notice p {
   margin-bottom: 0.5rem;
   font-size: 13px;
 }
-#shops .modal-dialog .icon {
+#shops #discountModal .modal-dialog .icon {
   font-size: 3rem;
   color: #ff9642;
 }
-#shops .modal-dialog .orange {
+#shops #discountModal .modal-dialog .orange {
   background-color: #ff9642;
   color: white;
   outline: none;
 }
-
+#shops .orange {
+  background-color: #ff9642;
+  color: white;
+  margin: 0 10px;
+}
 #shops .heading {
   font-family: "Lobster", cursive;
   font-size: 40px;
