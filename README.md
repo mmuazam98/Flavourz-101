@@ -8,7 +8,7 @@ Create an application that can create an impact in SRM Campus. It can be benefit
 The application also allows vendors to register themselves on the app and hence be open to online orders. Vendors can edit the menu from the app itself at any time after successful registration.
 <h2 align= "left"><b>A Peek at our Website</b></h2>
 <p align="left">
-   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-174839.png"> &ensp;
+   <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-07-001254.png"> &ensp;
    <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-174857.png"> &ensp;
    <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-174917.png"> &ensp;
    <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-06-175136.png"> &ensp;
