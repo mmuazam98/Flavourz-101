@@ -54,23 +54,6 @@ jQuery("#carousel").owlCarousel({
   },
 });
 
-$(window).load(function () {
-  if ($(window).width() < 500) {
-    $(".owl-slider").addClass("w-75");
-  } else {
-    $(".owl-slider").removeClass("w-75");
-  }
-});
-// $(window).resize(function () {
-//   let width = $(window).width();
-//   if (width < 768 && width > 600) {
-//     $(".owl-slider").toggleClass("container container-fluid");
-//   }
-//   if (width < 600) {
-//     $(".owl-slider").removeClass("container-fluid").addClass("container");
-//   }
-// });
-
 // shops section
 
 //==============

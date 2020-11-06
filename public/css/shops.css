@@ -176,6 +176,11 @@
 #shops .owl-carousel .item .details .price {
   font-size: 18px;
 }
+@media (max-width: 500px) {
+  #shops .owl-slider {
+    max-width: 80% !important;
+  }
+}
 
 /* shops layout */
 #shops .btn {

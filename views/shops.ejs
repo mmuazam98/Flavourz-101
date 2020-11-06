@@ -292,14 +292,22 @@
     <div id="carousel" class="owl-carousel">
       <% menus.forEach(menu => { %>
       <div class="item">
-        <img class="owl-lazy" data-src="<%= menu.imageUrl %>" alt="" />
+        <img
+          class="owl-lazy img-fluid"
+          data-src="<%= menu.imageUrl %>"
+          alt=""
+        />
         <div class="details">
           <span class="name"><%= menu.item %></span><br />
           <a class="shopName"><%= menu.shop.username %></a><br />
           <span class="price">₹<%= menu.price %></span><br />
           <div class="buyNow">
             <button class="btn">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <a
+                href="/shops/<%= menu.shop._id %>/menus/<%= menu._id %>/confirm"
+              >
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              </a>
             </button>
           </div>
         </div>
