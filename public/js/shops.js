@@ -1,9 +1,3 @@
-$(document).ready(function () {
-  setTimeout(function () {
-    $("#discountModal").modal("show");
-  }, 3000);
-});
-
 //COPY COUPON CODE
 const copy = document.getElementById("copyButton");
 const selection = window.getSelection();

@@ -1,7 +1,14 @@
-<%- include("partials/header") %>
+<%- include("partials/header") %> <% if(!currentUser){ %>
+<script>
+  setTimeout(function () {
+    $("#discountModal").modal("show");
+  }, 3000);
+</script>
+<% } %>
+
 <section id="shops">
   <!-- discount modal  -->
-  <% if(!currentUser){ %>
+
   <div
     class="modal fade"
     id="discountModal"
@@ -39,7 +46,6 @@
       </div>
     </div>
   </div>
-  <% } %>
 
   <!-- sign-in sign-up -->
   <div
@@ -282,7 +288,7 @@
 
   <!-- featured food  section-->
   <div class="owl-slider container">
-    <h3 class="heading text-center pb-3" id="ffood">Featured Food</h3>
+    <h3 class="heading text-center" id="ffood">Featured Food</h3>
     <div id="carousel" class="owl-carousel">
       <% menus.forEach(menu => { %>
       <div class="item">
@@ -293,21 +299,13 @@
           <span class="price">₹<%= menu.price %></span><br />
           <div class="buyNow">
             <button class="btn">
-              <a
-                href="/shops/<%= menu.shop._id %>/menus/<%= menu._id %>/confirm"
-                ><i class="fa fa-shopping-bag" aria-hidden="true"></i
-              ></a>
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </button>
           </div>
         </div>
       </div>
       <% }) %>
     </div>
-  </div>
-  <div class="container text-center">
-    <button class="btn orange" onclick="window.location.href='/menu'">
-      View All <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-    </button>
   </div>
   <!-- end of featured food  section-->
 </section>
