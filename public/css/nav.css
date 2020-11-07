@@ -462,13 +462,6 @@ a#logout i {
   color: white;
   margin: 0 10px;
 }
-/* @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css); */
-
-#rateUs {
-  /****** Style Star Rating Widget *****/
-  /***** CSS Magic to Highlight Stars on Hover *****/
-  /* hover previous stars in list */
-}
 #rateUs fieldset,
 #rateUs label {
   margin: 0;

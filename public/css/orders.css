@@ -5,7 +5,8 @@
 }
 @media (max-width: 767px) {
   #orders {
-    margin-top: 99px;
+    margin-top: 99px !important;
+    padding-top: 100px;
   }
 }
 #orders .thead-orange {

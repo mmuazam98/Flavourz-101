@@ -152,10 +152,15 @@
             </li>
             <% if(currentUser){ %>
             <li class="nav-item">
-              <a class="nav-link" id="orders" href="/orders" title="Orders"
+              <a
+                class="nav-link"
+                id="orders"
+                href="/shops/<%= currentUser._id %>/orders"
+                title="Orders"
                 ><i class="fa fa-cart-arrow-down mr-2" aria-hidden="true"></i
               ></a>
             </li>
+
             <% }else{ %>
             <li class="nav-item">
               <a class="nav-link" id="orders" href="#" title="Orders"

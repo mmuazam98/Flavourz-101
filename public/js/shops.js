@@ -273,7 +273,7 @@ $(".authenticate button").click(function () {
   });
   setTimeout(function () {
     $.notify("Please register only if you are a Vendor.", {
-      position: "top center",
+      position: "top left",
       className: "warn",
       autoHideDelay: 1800,
     });
