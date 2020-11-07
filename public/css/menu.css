@@ -1,87 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-/* authenticate  */
-#menu .prettyline {
-  height: 5px;
-  border-top: 0;
-  background: #c4e17f;
-  border-radius: 5px;
-  background-image: -webkit-linear-gradient(
-    left,
-    #c4e17f,
-    #c4e17f 12.5%,
-    #f7fdca 12.5%,
-    #f7fdca 25%,
-    #fecf71 25%,
-    #fecf71 37.5%,
-    #f0776c 37.5%,
-    #f0776c 50%,
-    #db9dbe 50%,
-    #db9dbe 62.5%,
-    #c49cde 62.5%,
-    #c49cde 75%,
-    #669ae1 75%,
-    #669ae1 87.5%,
-    #62c2e4 87.5%,
-    #62c2e4
-  );
-  background-image: -moz-linear-gradient(
-    left,
-    #c4e17f,
-    #c4e17f 12.5%,
-    #f7fdca 12.5%,
-    #f7fdca 25%,
-    #fecf71 25%,
-    #fecf71 37.5%,
-    #f0776c 37.5%,
-    #f0776c 50%,
-    #db9dbe 50%,
-    #db9dbe 62.5%,
-    #c49cde 62.5%,
-    #c49cde 75%,
-    #669ae1 75%,
-    #669ae1 87.5%,
-    #62c2e4 87.5%,
-    #62c2e4
-  );
-  background-image: -o-linear-gradient(
-    left,
-    #c4e17f,
-    #c4e17f 12.5%,
-    #f7fdca 12.5%,
-    #f7fdca 25%,
-    #fecf71 25%,
-    #fecf71 37.5%,
-    #f0776c 37.5%,
-    #f0776c 50%,
-    #db9dbe 50%,
-    #db9dbe 62.5%,
-    #c49cde 62.5%,
-    #c49cde 75%,
-    #669ae1 75%,
-    #669ae1 87.5%,
-    #62c2e4 87.5%,
-    #62c2e4
-  );
-  background-image: linear-gradient(
-    to right,
-    #c4e17f,
-    #c4e17f 12.5%,
-    #f7fdca 12.5%,
-    #f7fdca 25%,
-    #fecf71 25%,
-    #fecf71 37.5%,
-    #f0776c 37.5%,
-    #f0776c 50%,
-    #db9dbe 50%,
-    #db9dbe 62.5%,
-    #c49cde 62.5%,
-    #c49cde 75%,
-    #669ae1 75%,
-    #669ae1 87.5%,
-    #62c2e4 87.5%,
-    #62c2e4
-  );
-}
 
 /*checkbox in edit menu modal  */
 
@@ -315,6 +232,11 @@ i.fa-user-edit {
 }
 @media (max-width: 767px) {
   #menu {
-    margin-top: 50px;
+    margin-top: 99px;
+  }
+}
+@media (max-width: 500px) {
+  #menu .owl-slider {
+    max-width: 85% !important;
   }
 }

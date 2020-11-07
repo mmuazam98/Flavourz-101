@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap");
+
 #shops .owl-slider {
   margin-top: -30px;
 }
@@ -12,6 +13,7 @@
   margin-left: 50%;
   transform: translateX(-50%);
 }
+
 #shops .container {
   padding: 1rem 0rem;
 }
@@ -53,6 +55,7 @@
   font-family: "Lobster", cursive;
   font-size: 40px;
 }
+
 .owl-nav button {
   position: absolute;
   top: 50%;
@@ -278,7 +281,26 @@
   overflow: hidden;
   display: block;
 }
-
+@media (max-width: 767px) {
+  #shops {
+    margin-top: 10px;
+  }
+  #shops .container.welcomeUser {
+    margin-top: 1px;
+  }
+  #shops .heading {
+    font-family: "Lobster", cursive;
+    font-size: 35px;
+  }
+  #shops button.auth {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  #shops button.auth {
+    font-size: 13px;
+  }
+}
 @media screen and (min-width: 320px) {
   #shops .layout .pnl-wrapper {
     height: 70px;

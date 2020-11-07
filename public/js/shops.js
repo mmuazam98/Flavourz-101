@@ -272,14 +272,11 @@ $(".authenticate button").click(function () {
     autoHideDelay: 1500,
   });
   setTimeout(function () {
-    $(".authenticate button").notify(
-      "Please register only if you are a Vendor.",
-      {
-        position: "left",
-        className: "warn",
-        autoHideDelay: 1800,
-      }
-    );
+    $.notify("Please register only if you are a Vendor.", {
+      position: "top center",
+      className: "warn",
+      autoHideDelay: 1800,
+    });
   }, 1500);
 
   setTimeout(function () {

@@ -76,13 +76,14 @@ body {
 }
 #navigation .sidebar__list {
   list-style: none;
-  padding-top: 25px;
+  padding-top: 45px;
   /* padding: 0; */
 }
 #navigation .sidebar__list li {
   margin-bottom: 10px;
 }
 #navigation .sidebar__list li a {
+  opacity: 0.9;
   padding: 15px 20px;
   color: white;
   display: inline-block;
@@ -119,11 +120,11 @@ body {
   }
 }
 #navigation .navabar__menu {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   color: white;
   background-color: #ff9642;
-  font-size: 18px;
+  font-size: 22px;
   border-radius: 5px;
 }
 #navigation .navabar__menu i {
@@ -163,19 +164,23 @@ a#logout i {
   color: white;
   transform: translate(-50%, -50%) scale(1.15);
 }
-#navigation .brand__sidebar img {
+#navigation .brand__sidebar img.side-logo {
   top: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   height: 70px;
   width: 130px;
   cursor: pointer;
 }
-#navigation .logo {
+.desktop.logo {
   position: absolute;
+  top: 8px;
   left: 50%;
   transform: translateX(-50%);
 }
-#navigation .logo img {
-  height: 60px;
+.desktop.logo img {
+  height: 66px;
   width: auto;
   cursor: pointer;
 }
@@ -188,15 +193,28 @@ a#logout i {
   #navigation {
     display: none;
   }
+  .desktop.logo {
+    position: absolute;
+    top: 8px;
+    left: 70px;
+    transform: translateX(-50%);
+  }
+  .desktop.logo img {
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+  }
 }
 /* mobile navigation  */
 #bottom-nav nav {
   height: 60px;
-  background: #ff9642 !important;
-  border-top: 3px solid #f78222;
+  background: #ff841f !important;
+  border-top: 3px solid #ff7300;
 }
 
 #bottom-nav .nav li a {
+  display: inline !important;
+
   padding: 0 14vw;
   color: white;
   font-size: 19px;
@@ -256,7 +274,8 @@ a#logout i {
 
 #navigation .sidebar__list a.current {
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 22px;
+  opacity: 1;
   color: rgb(255, 255, 255) !important;
   font-weight: 600;
 }
@@ -395,6 +414,7 @@ a#logout i {
 #footer .widget-about img {
   display: block;
   margin-bottom: 30px;
+  /* margin: 20px auto; */
   height: 100px;
   width: 200px;
 }
@@ -428,6 +448,13 @@ a#logout i {
 @media (max-width: 767px) {
   #footer .copyright-text {
     margin-bottom: 50px;
+  }
+  #footer .widget-about img {
+    display: block;
+    /* margin-bottom: 30px; */
+    margin: 0 auto 20px auto;
+    height: 100px;
+    width: 200px;
   }
 }
 #footer button.orange {

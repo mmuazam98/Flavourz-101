@@ -1,40 +1,5 @@
 <%- include("partials/header") %>
 <section id="confirm">
-  <!-- order confirmation modal  -->
-  <!-- Modal -->
-  <div
-    class="modal fade modal-center"
-    id="myModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title font-weight-bold" id="exampleModalLabel">
-            Order confirmed!
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-          </h4>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body text-center">
-          <i class="fa fa-check-circle fa-5x"></i>
-          <p>Your Order ID is: <strong id="orderID"></strong></p>
-          <p>You have to pay: <strong id="totalCost"></strong></p>
-          <p class="note">*Please take a screenshot of your order ID.</p>
-        </div>
-      </div>
-    </div>
-  </div>
   <main>
     <div class="basket">
       <div class="basket-module">
@@ -113,19 +78,23 @@
         </div>
         <div class="summary-delivery">
           <select name="delivery-collection" class="summary-delivery-selection">
-            <option value="0" selected="selected">
+            <!-- <option value="0" selected="selected">
               Select Collection or Delivery
-            </option>
-            <option value="collection">Collection</option>
-            <option value="delivery" disabled>Delivery (Coming Soon)</option>
+            </option> -->
+            <option value="collection" selected="selected">Collect</option>
+            <option value="delivery" disabled>Deliver (Coming Soon)</option>
           </select>
         </div>
         <div class="summary-total">
           <div class="total-title">Total</div>
-          <div class="total-value final-value" id="basket-total"><%= menu.price %>.00</div>
+          <div class="total-value final-value" id="basket-total">
+            <%= menu.price %>.00
+          </div>
         </div>
         <div class="summary-checkout">
-          <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/orders"><button class="checkout-cta">Confirm Order</button></a>
+          <a href="/shops/<%= shop._id %>/menus/<%= menu._id %>/orders"
+            ><button class="checkout-cta">Confirm Order</button></a
+          >
         </div>
       </div>
     </aside>

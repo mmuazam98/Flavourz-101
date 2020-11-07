@@ -11,18 +11,18 @@ function checkActive() {
   if ($(window).width() > 768) {
     if ($(".sidebar__navbar").hasClass("active")) {
       $(
-        "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder"
+        "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder, .desktop.logo"
       ).addClass("shift");
       $(".navabar__menu i").removeClass("fa fa-bars").addClass("fas fa-stream");
     } else {
       $(".navabar__menu i").addClass("fa fa-bars").removeClass("fas fa-stream");
       $(
-        "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder"
+        "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder, .desktop.logo"
       ).removeClass("shift");
     }
   } else {
     $(
-      "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder"
+      "section#shops, section#confirm, section#menu, section#footer,section#orders, section#confirmOrder, .desktop.logo"
     ).removeClass("shift");
   }
 }
@@ -55,4 +55,10 @@ $(".navabar__menu,.nav-hide").click(function () {
 $(".sidebar__navbar.active span").click(function () {
   $(".sidebar__navbar").toggleClass("active");
   checkActive();
+});
+
+$("fieldset.rating input").click(function () {
+  $("#thanks").html(
+    '<em>THANK YOU!</em> <i class="fa fa-smile-o fa-1x" aria-hidden="true" style="font-size: 20px;"></i>'
+  );
 });

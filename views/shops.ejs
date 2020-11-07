@@ -247,7 +247,7 @@
   </div>
   <% } %>
   <!-- shops section  -->
-  <div class="layout">
+  <div class="layout mt-3">
     <h3 class="heading text-center" id="fshops">Featured Shops</h3>
     <section class="inner">
       <ul class="grid">
@@ -288,23 +288,23 @@
 
   <!-- featured food  section-->
   <div class="owl-slider container">
-    <h3 class="heading text-center" id="ffood">Featured Food</h3>
+    <h3 class="heading text-center pb-3" id="ffood">Featured Food</h3>
     <div id="carousel" class="owl-carousel">
-      <% menus.forEach(menu => { %>
+      <% for(var i = 0;i<10;i++) { %>
       <div class="item">
         <img
           class="owl-lazy img-fluid"
-          data-src="<%= menu.imageUrl %>"
+          data-src="<%= menus[i].imageUrl %>"
           alt=""
         />
         <div class="details">
-          <span class="name"><%= menu.item %></span><br />
-          <a class="shopName"><%= menu.shop.username %></a><br />
-          <span class="price">₹<%= menu.price %></span><br />
+          <span class="name"><%= menus[i].item %></span><br />
+          <a class="shopName"><%= menus[i].shop.username %></a><br />
+          <span class="price">₹<%= menus[i].price %></span><br />
           <div class="buyNow">
             <button class="btn">
               <a
-                href="/shops/<%= menu.shop._id %>/menus/<%= menu._id %>/confirm"
+                href="/shops/<%= menus[i].shop._id %>/menus/<%= menus[i]._id %>/confirm"
               >
                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
               </a>
@@ -312,9 +312,15 @@
           </div>
         </div>
       </div>
-      <% }) %>
+      <% } %>
     </div>
   </div>
+  <div class="container text-center">
+    <button class="btn orange" onclick="window.location.href='/menu'">
+      View All <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </button>
+  </div>
+  <!-- end
   <!-- end of featured food  section-->
 </section>
 <%- include("partials/footer") %>
