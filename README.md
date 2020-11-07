@@ -4,8 +4,7 @@
 Create an application that can create an impact in SRM Campus. It can be benefitting anyone, including staff, students, management or all of them.
 <h2 align= "left"><b>Our Product</b></h2>
 <p align="left"><img width=25% src="https://img.techpowerup.org/201106/logo-101.png"></p>
-<b>Hello everyone!</b> We present before you <b>Flavourz101</b>. This project aims at providing the user with an application that displays various food stalls in the SRM-IST (KTR campus). This application also has additional functionality that allows the user to view the menu of any of the food stalls and place an order online at that particular shop. The user can then visit the shop and pick up the order. Hence it saves the user’s time.
-The application also allows vendors to register themselves on the app and hence be open to online orders. Vendors can edit the menu from the app itself at any time after successful registration.
+As a thought elite once said- <i>”Time is money.”</i> With that said, think of the wave of human heads we have to shift through just to get hold of our favourite chicken roll. Brings down the vibe, right? Even the thought of standing in long queues and waiting to the point where you’re not even hungry anymore brings a massive frown upon our faces. Well, fret not, because <b><i>Flavourz 101</i></b> is just the solution for that. Order your favourite dishes from your favourite shops, with just a click on your phone! Save yourself the time, save yourself the vibe. Get to choose from a diverse menu. If you’re a foodie and here to buy, just tap away, don’t worry about registering. If you’re a vendor looking to sell, make sure to register first and add your menu, you don’t want your customers to miss out on anything!
 <h2 align= "left"><b>A Peek at our Website</b></h2>
 <p align="left">
    <img width=40% src="https://img.techpowerup.org/201106/screenshot-2020-11-07-001254.png"> &ensp;
