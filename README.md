@@ -16,7 +16,7 @@ As a thought elite once said- <i>”Time is money.”</i> With that said, think 
 </p>
 <h2 align= "left"><b>Have Fun With Our Product</b></h2>
 
-- Website Link : https://flavourz101.herokuapp.com/
+- Website Link : https://flavourz101.onrender.com
 
 <h2 align= "left"><b><u>Tech Stack Used</u></b></h2>
 <b>Back End </b>
